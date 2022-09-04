@@ -1,0 +1,170 @@
+* {
+  justify-content: center;
+  align-items: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+}
+
+.nav-bar {
+  background-color: rgb(214, 214, 214);
+  margin: 0 auto;
+  color: white;
+  margin-top: 1%;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+  max-width: fit-content;
+  min-width: 20px;
+  padding: 1rem;
+}
+.nav-bar span > p {
+  display: inline;
+  /* background-color: aqua; */
+  margin: 15px;
+}
+.active-span {
+  background-color: rgb(31, 19, 139);
+  width: calc(25% - 5px);
+  border-radius: 20px;
+  /* display: block; */
+  transition: all 300mxs ease-in-out;
+  padding: 12px;
+}
+
+.plans {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.plans > * {
+  width: 100%;
+}
+
+.card {
+  flex: 0 1 calc(50% - 1em);
+  animation: pop-up 1s ease-in-out;
+}
+
+#diff {
+  animation-delay: 0.1s;
+}
+#card3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -4vh);
+  }
+  100% {
+    transform: translate(50, -8vh);
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .plans {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+  .card {
+    flex: 0 1 calc(25% - 1em);
+    max-width: fit-content;
+    justify-content: center;
+    display: block;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .plans {
+    grid-template-columns: unset;
+    display: grid;
+  }
+  .card {
+    flex: 0 1 calc(25% - 1em);
+    max-width: fit-content;
+    justify-content: center;
+    display: block;
+    width: 400px;
+  }
+}
+
+.card .content {
+  margin: 30px;
+  text-align: left;
+  width: fit-content;
+}
+
+.content > p {
+  color: #9c9b9b;
+}
+.price {
+  display: inline-flex;
+  text-align: center;
+}
+.price > p {
+  color: #9c9b9b;
+  display: inline-flex;
+  text-align: left;
+  margin: 10%;
+  font-size: small;
+  margin-left: 2%;
+  width: 100px;
+}
+.content button {
+  display: block;
+  background-color: rgb(31, 19, 139);
+  border-radius: 50px;
+  width: 290px;
+  height: 50px;
+  font-size: large;
+  border: 0cm;
+  cursor: pointer;
+  color: white;
+}
+.details > p {
+  color: #636060;
+}
+.details ul li {
+  list-style: url("tick.png");
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #636060;
+  padding-inline-start: 15px;
+  transform: translate(-5%);
+}
+
+.head {
+  background-color: white;
+  margin: 2px;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 1%;
+  display: inline-flex;
+  border-radius: 50px;
+}
+#diff {
+  background-color: #eeeeee;
+  border-radius: 60px;
+  border: 1px solid rgb(185, 180, 180);
+  margin: -10px;
+  min-width: 400px;
+  padding-right: 0;
+}
+
+[data-tab-content] {
+  display: none;
+}
+.active[data-tab-content] {
+  display: grid;
+}
