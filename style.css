@@ -10,32 +10,6 @@ body {
   width: 100vw;
 }
 
-.nav-bar {
-  background-color: rgb(214, 214, 214);
-  margin: 0 auto;
-  color: white;
-  margin-top: 1%;
-  cursor: pointer;
-  border-radius: 50px;
-  text-align: center;
-  max-width: fit-content;
-  min-width: 20px;
-  padding: 1rem;
-}
-.nav-bar span > p {
-  display: inline;
-  /* background-color: aqua; */
-  margin: 15px;
-}
-.active-span {
-  background-color: rgb(31, 19, 139);
-  width: calc(25% - 5px);
-  border-radius: 20px;
-  /* display: block; */
-  transition: all 300mxs ease-in-out;
-  padding: 12px;
-}
-
 .plans {
   margin: 0 auto;
   display: flex;
@@ -157,14 +131,38 @@ body {
   background-color: #eeeeee;
   border-radius: 60px;
   border: 1px solid rgb(185, 180, 180);
-  margin: -10px;
-  min-width: 400px;
+  margin: 10px;
+  min-width: 200px;
   padding-right: 0;
 }
 
-[data-tab-content] {
-  display: none;
+.button-box {
+  width: 320px;
+  margin: 35px auto;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid rgb(185, 180, 180);
+  background: #eeeeee;
 }
-.active[data-tab-content] {
-  display: grid;
+
+.toggle-btn {
+  color: white;
+  padding: 10px 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+}
+
+#btn {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 170px;
+  height: 100%;
+  background: rgb(31, 19, 139);
+  border-radius: 30px;
+  transition: 0.5s;
 }
